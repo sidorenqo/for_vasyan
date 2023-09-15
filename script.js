@@ -1,4 +1,34 @@
+let inputArray = []
+
 function addGuest() {
+    const nameInputElement = document.getElementById('name');
+    const surnameInputlement = document.getElementById('surname');
+    
+    let name = nameInputElement.value;
+    nameInputElement.value = '';
+    
+    let surname = surnameInputlement.value;
+    surnameInputlement.value = '';
+
+    let person = `${name} ${surname}`;
+
+    inputArray.push(person)
+    console.log(inputArray)
+}
+
+document.addEventListener('keydown', function(event){
+    if (event.code == 'Enter') {
+        addGuest()
+    }
+  })
+
+
+
+
+
+
+/**
+ * function addGuest() {
     const nameInputElement = document.getElementById('name');
     const surnameInputlement = document.getElementById('surname');
     
@@ -21,3 +51,4 @@ document.addEventListener('keydown', function(event){
         addGuest()
     }
   })
+ */
